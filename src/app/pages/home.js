@@ -1,4 +1,7 @@
+"use client";
+
 import { EnvelopeAtFill, Github, Linkedin } from "react-bootstrap-icons";
+import Image from "next/image";
 import ExperienceList from "../components/experienceList";
 import experience from "../static/data/experience.json";
 import projects from "../static/data/projects.json";
@@ -10,11 +13,22 @@ export default function MainPage() {
   return (
     <div className="flex flex-col h-full text-left px-8 py-12 gap-20">
       {/* Logo and Resume */}
-      <section className="logoResume flex flex-row justify-between">
-        <a className=" text-xl">Logo</a>
-        <a href="" className="border-headers border-2 rounded-md text-headers">
-          <p className="text-sm p-1 tracking-tight">Resume</p>
+      <section className="logoResume flex flex-row justify-between items-center">
+        <a>
+          <Image
+            src={require("../static/img/brand/logo.png")}
+            width={45}
+            height={45}
+          />
         </a>
+        <div>
+          <a
+            href=""
+            className="flex items-center justify-center border-headers border-2 rounded-md text-headers"
+          >
+            <span className="text-sm px-2 py-2 tracking-tight">Resume</span>
+          </a>
+        </div>
       </section>
       {/* Intro */}
       <section className="intro flex flex-col w-10/12 gap-3">

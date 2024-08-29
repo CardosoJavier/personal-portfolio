@@ -1,14 +1,37 @@
 [
     {
         "name": "API Vault",
-        "description": "Cross-platform app designed specifically for engineering students to securely manage and store API keys, aiming to reduce development time for small apps and prototypes. It features API key grouping, dynamic filtering, sorting, and real-time search to simplify key management. Security is enhanced through integrated Two-Factor Authentication using the Twilio API.",
+        "description": "Cross-platform dektop app designed specifically for engineering students to securely manage and store API keys, aiming to reduce development time for small apps and prototypes. It features API key grouping, dynamic filtering, sorting, and real-time search to simplify key management. Security is enhanced through Two-Factor Authentication using the Twilio API.",
         "tech": ["Avalonia", ".Net Core", "Cassandra Datastax", "ReactiveUI"],
-        "image": "apivault.png"
+        "image": "apivault.png",
+        "link": "https://github.com/CardosoJavier/Api_Vault"
     },
     {
         "name": "Diversyfinance",
         "description": "Full-Stack app that helps users overcome language barriers in personal finance by offering a user-friendly chatbot that summarizes and translates financial information into any language. The app automatically gathers, updates, and maintains financial services data from major institutions, providing users with up-to-date information tailored to their needs.",
         "tech": ["React", "Flask", "MongoDb", "Beautifulsoup"],
-        "image": "diversifynance.png"
+        "image": "diversifynance.png",
+        "link": "https://github.com/CardosoJavier/Diversifynance"
+    },
+    {
+        "name": "CSEC UTA",
+        "description": "Website developed under request of The University of Texas at Arlington Cybersecurity Club to display orgaziontion officers, events, and sponsors.",
+        "tech": ["React", "JavaScript", "HTML/CSS"],
+        "image":"csec.png",
+        "link": "https://utacsec.org"
+    },
+    {
+        "name": "XR Chess",
+        "description": "Developed a PvE and PvP VR chess game using Unity, designed for Oculus devices. Integrated AI for single-player mode and real-time multiplayer functionality for player-versus-player matches. Leveraged the Lichess API for advanced chess engine capabilities.",
+        "tech": ["C#", "Unity Engine", "Lichess API"],
+        "image": "ChessQuest.png",
+        "link": "https://github.com/CardosoJavier/XR_Chess"
+    },
+    {
+        "name": "Space Invaders",
+        "description": "Desktop video game inspired by classic space invaders game from 1978.",
+        "tech": ["Python3", "Pygame"],
+        "image": "spaceInvaders.png",
+        "link": "https://github.com/CardosoJavier/Space_Invaders"
     }
 ]

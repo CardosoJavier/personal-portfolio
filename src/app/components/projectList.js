@@ -1,14 +1,32 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { ArrowRight } from "react-bootstrap-icons";
 import ListItemHeader from "./listItemHeader";
 import TechList from "./techList";
-import { ArrowRight } from "react-bootstrap-icons";
+import { current } from "tailwindcss/colors";
 
 export default function ProjectList({ projects }) {
+  const [counter, setCounter] = useState(2);
+  const [currentProjects, setCurrentProjects] = useState([]);
+
+  useEffect(() => {
+    setCurrentProjects(projects.slice(0, counter));
+
+    console.log("counter: " + counter);
+    console.log("length: " + projects.length);
+  }, [counter]);
+
+  function displayNextProjects() {
+    const newCounter =
+      counter + 2 >= projects.length ? projects.length : counter + 2;
+    setCounter(newCounter);
+  }
+
   return (
     <div>
       <ul className="flex flex-col gap-10">
-        {projects.map((project, index) => (
+        {currentProjects.map((project, index) => (
           <li key={index} className="flex flex-col mb-5">
             <ListItemHeader header={project.name} link={project.link} />
             <div className="flex flex-col gap-2">
@@ -18,7 +36,7 @@ export default function ProjectList({ projects }) {
               <Image
                 src={require("../static/img/projects/" + project.image)}
                 width={350}
-                height={350}
+                height="auto"
                 alt={project.name + " banner"}
                 className="rounded-lg"
               />
@@ -27,17 +45,16 @@ export default function ProjectList({ projects }) {
           </li>
         ))}
       </ul>
-      <div className="mt-10 justify-start items-baseline">
-        <a
-          href={"#"}
-          target="_blank"
-          className="font-medium text-slate-200 leading-snug"
-        >
-          <span className="inline-flex items-baseline gap-2">
-            View full project list <ArrowRight />
-          </span>
-        </a>
-      </div>
+      {counter < projects.length && (
+        <div className=" w-full text-center mt-10">
+          <button
+            onClick={() => displayNextProjects()}
+            className=" text-sm text-body tracking-wider border-body border-2 rounded-full px-2 py-1"
+          >
+            Display more
+          </button>
+        </div>
+      )}
     </div>
   );
 }

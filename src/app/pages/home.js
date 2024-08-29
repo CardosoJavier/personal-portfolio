@@ -3,11 +3,11 @@
 import { EnvelopeAtFill, Github, Linkedin } from "react-bootstrap-icons";
 import Image from "next/image";
 import ExperienceList from "../components/experienceList";
+import SectionHeader from "../components/sectionHeader";
+import ProjectList from "../components/projectList";
 import experience from "../static/data/experience.json";
 import projects from "../static/data/projects.json";
 import links from "../static/data/links.json";
-import SectionHeader from "../components/sectionHeader";
-import ProjectList from "../components/projectList";
 
 export default function MainPage() {
   return (

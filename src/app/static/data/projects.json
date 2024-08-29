@@ -22,7 +22,7 @@
     },
     {
         "name": "XR Chess",
-        "description": "Chess game using Unity, designed for Oculus devices. Integrated Lichess chess bot for single-player mode and real-time multiplayer functionality for player-versus-player matches.",
+        "description": "Chess game developed with Unity, designed for Oculus devices. Integrated Lichess chess bot for single-player mode and real-time multiplayer functionality for player-versus-player matches.",
         "tech": ["C#", "Unity Engine", "Lichess API"],
         "image": "ChessQuest.png",
         "link": "https://github.com/CardosoJavier/XR_Chess"

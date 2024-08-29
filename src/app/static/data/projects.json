@@ -15,14 +15,14 @@
     },
     {
         "name": "CSEC UTA",
-        "description": "Website developed under request of The University of Texas at Arlington Cybersecurity Club to display orgaziontion officers, events, and sponsors.",
+        "description": "Website developed under request of The University of Texas at Arlington Cybersecurity Club (CSCEC) to display officer's information, events, sponsors, and other relevant information.",
         "tech": ["React", "JavaScript", "HTML/CSS"],
         "image":"csec.png",
         "link": "https://utacsec.org"
     },
     {
         "name": "XR Chess",
-        "description": "Developed a PvE and PvP VR chess game using Unity, designed for Oculus devices. Integrated AI for single-player mode and real-time multiplayer functionality for player-versus-player matches. Leveraged the Lichess API for advanced chess engine capabilities.",
+        "description": "Developed a PvE and PvP VR chess game using Unity, designed for Oculus devices. Integrated Lichess bot for single-player mode and real-time multiplayer functionality for player-versus-player matches.",
         "tech": ["C#", "Unity Engine", "Lichess API"],
         "image": "ChessQuest.png",
         "link": "https://github.com/CardosoJavier/XR_Chess"

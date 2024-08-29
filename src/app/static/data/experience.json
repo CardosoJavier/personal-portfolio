@@ -1,0 +1,18 @@
+[
+    {
+        "date": "July 2024 - Present",
+        "title": "Software Engineer Inter · ",
+        "company": "JPMorganChase",
+        "description": "Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.",
+        "tech": ["React", "Spring Boot", "GraphQL", "Tailwind", "Docker", "AWS"],
+        "link": "https://www.jpmorganchase.com"
+    },
+    {
+        "date": "July - August 2023",
+        "title": "Software Engineer Inter · ",
+        "company": "JPMorganChase",
+        "description": "Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.",
+        "tech": ["Angular", "ASP.NET", "TypeScript"],
+        "link": "https://www.jpmorganchase.com"
+    }
+]

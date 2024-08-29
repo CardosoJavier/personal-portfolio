@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "SpecialAlphabet10";
+  src: url("/portfolio/public/fonts/SpecialAlphabetsP10.woff2") format("woff2"),
+    url("/portfolio/public/fonts/SpecialAlphabetsP10.woff") format("woff"),
+    url("/portfolio/public/fonts/SpecialAlphabetsP10Regular.otf")
+      format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

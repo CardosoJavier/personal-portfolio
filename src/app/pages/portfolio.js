@@ -9,7 +9,7 @@ import experience from "../static/data/experience.json";
 import projects from "../static/data/projects.json";
 import links from "../static/data/links.json";
 
-export default function MainPage() {
+export default function Portfolio() {
   return (
     <div className="flex flex-col h-full text-left px-8 py-12 gap-20">
       {/* Logo and Resume */}

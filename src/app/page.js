@@ -1,9 +1,9 @@
-import MainPage from "./pages/home";
+import Portfolio from "./pages/portfolio";
 
 export default function Home() {
   return (
     <main className="bg-fixed bg-custom-gradient">
-      <MainPage />
+      <Portfolio />
     </main>
   );
 }

@@ -45,7 +45,7 @@ export default function ProjectList({ projects }) {
         <div className=" w-full text-center mt-10">
           <button
             onClick={() => displayNextProjects()}
-            className=" text-sm text-body tracking-wider border-body border-2 rounded-full px-2 py-1"
+            className=" text-sm text-body tracking-tight border-body border-2 rounded-md px-2 py-1"
           >
             Display more
           </button>

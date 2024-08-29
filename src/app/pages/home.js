@@ -14,7 +14,7 @@ export default function MainPage() {
     <div className="flex flex-col h-full text-left px-8 py-12 gap-20">
       {/* Logo and Resume */}
       <section className="logoResume flex flex-row justify-between items-center">
-        <a>
+        <a href={links.domain}>
           <Image
             src={require("../static/img/brand/Logo.png")}
             width={45}
@@ -23,7 +23,10 @@ export default function MainPage() {
         </a>
         <div>
           <a
-            href=""
+            href="/JavierCardoso.pdf"
+            type="application/pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center border-headers border-2 rounded-md text-headers"
           >
             <span className="text-sm px-2 py-2 tracking-tight">Resume</span>

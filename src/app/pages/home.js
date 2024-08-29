@@ -16,7 +16,7 @@ export default function MainPage() {
       <section className="logoResume flex flex-row justify-between items-center">
         <a>
           <Image
-            src={require("../static/img/brand/logo.png")}
+            src={require("../static/img/brand/Logo.png")}
             width={45}
             height={45}
           />

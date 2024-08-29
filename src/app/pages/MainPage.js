@@ -2,6 +2,7 @@ import { EnvelopeAtFill, Github, Linkedin } from "react-bootstrap-icons";
 import ExperienceList from "../components/experienceList";
 import experience from "../static/data/experience.json";
 import projects from "../static/data/projects.json";
+import links from "../static/data/links.json";
 import SectionHeader from "../components/sectionHeader";
 import ProjectList from "../components/projectList";
 
@@ -11,7 +12,7 @@ export default function MainPage() {
       {/* Logo and Resume */}
       <section className="logoResume flex flex-row justify-between">
         <a className=" text-xl">Logo</a>
-        <a href="" className="border-headers border-2 rounded-md">
+        <a href="" className="border-headers border-2 rounded-md text-headers">
           <p className="text-sm p-1 tracking-tight">Resume</p>
         </a>
       </section>
@@ -26,9 +27,9 @@ export default function MainPage() {
         <p className="text-body leading-normal tracking-tight font-light">
           Just another developer trying to find a place in the world.
         </p>
-        <div className=" links flex flex-row gap-5">
+        <div className="links flex flex-row gap-5">
           <a
-            href=""
+            href={links.github}
             target="_blank"
             rel="noopener noreferrer"
             className=" cursor-pointer"
@@ -36,7 +37,7 @@ export default function MainPage() {
             <Github color="#C6CDD4" size={20} />
           </a>
           <a
-            href=""
+            href={links.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className=" cursor-pointer"
@@ -44,7 +45,7 @@ export default function MainPage() {
             <Linkedin color="#C6CDD4" size={20} />
           </a>
           <a
-            href=""
+            href={"mailto:" + links.email}
             target="_blank"
             rel="noopener noreferrer"
             className=" cursor-pointer"

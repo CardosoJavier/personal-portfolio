@@ -12,9 +12,6 @@ export default function ProjectList({ projects }) {
 
   useEffect(() => {
     setCurrentProjects(projects.slice(0, counter));
-
-    console.log("counter: " + counter);
-    console.log("length: " + projects.length);
   }, [counter]);
 
   function displayNextProjects() {

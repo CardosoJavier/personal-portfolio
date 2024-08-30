@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import { EnvelopeAtFill, Github, Linkedin } from "react-bootstrap-icons";
 import Image from "next/image";
 import ExperienceList from "../components/experienceList";
@@ -11,7 +10,7 @@ import links from "../static/data/links.json";
 
 export default function Portfolio() {
   return (
-    <div className="flex flex-col h-full text-left px-8 py-12 gap-20">
+    <div className="grid grid-cols-1 h-full text-left px-8 py-12 gap-20">
       {/* Logo and Resume */}
       <section className="logoResume flex flex-row justify-between items-center">
         <a href={links.domain}>
@@ -25,6 +24,7 @@ export default function Portfolio() {
                 : 45
             }
             height="auto"
+            className=" transition-transform duration-200 hover:scale-125"
           />
         </a>
         <div>
@@ -33,7 +33,7 @@ export default function Portfolio() {
             type="application/pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center border-headers border-2 rounded-md text-headers"
+            className="flex items-center justify-center border-headers border-2 rounded-md text-headers transition-colors duration-300 hover:text-teal-400 hover:border-teal-400"
           >
             <span className="text-sm px-2 py-2 tracking-tight md:text-base">
               Resume

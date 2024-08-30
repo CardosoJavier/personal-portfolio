@@ -21,21 +21,33 @@ export default function ProjectList({ projects }) {
 
   return (
     <div>
-      <ul className="flex flex-col gap-10">
+      <ul className="grid grid-cols-1 gap-10">
         {currentProjects.map((project, index) => (
-          <li key={index} className={`flex flex-col mb-5`}>
-            <ListItemHeader header={project.name} link={project.link} />
-            <div className="flex flex-col gap-2">
+          <li
+            key={index}
+            className={`grid grid-cols-1 mb-5 rounded-md transition-colors duration-500 md:gap-5 md:grid-cols-2 lg:hover:bg-body/10`}
+          >
+            <div className="flex flex-col gap-2 md:w-11/12">
+              <ListItemHeader header={project.name} link={project.link} />
               <ListBody body={project.description} />
               <Image
                 src={require("../static/img/projects/" + project.image)}
                 width={window >= 768 ? 380 : window >= 1024 ? 450 : 350}
                 height="auto"
                 alt={project.name + " banner"}
-                className={`rounded-lg border-2 transition duration-500 border-body/35 hover:bg-body`}
+                className={`rounded-lg border-2 transition duration-500 border-body/35 hover:bg-body md:hidden`}
+              />
+              <TechList tech={project.tech} />
+            </div>
+            <div className="flex justify-center items-center">
+              <Image
+                src={require("../static/img/projects/" + project.image)}
+                width={window >= 768 ? 380 : window >= 1024 ? 450 : 350}
+                height="auto"
+                alt={project.name + " banner"}
+                className={`rounded-lg border-2 transition duration-500 border-body/35 hover:bg-body hidden md:block`}
               />
             </div>
-            <TechList tech={project.tech} />
           </li>
         ))}
       </ul>

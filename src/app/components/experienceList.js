@@ -1,13 +1,14 @@
 "use client";
 import TechList from "./techList";
 import ListItemHeader from "./listItemHeader";
+import ListBody from "./listBody";
 
 export default function ExperienceList({ experiences }) {
   return (
     <ul className="flex flex-col gap-10">
       {experiences.map((experience, index) => (
         <li key={index}>
-          <header className="text-body text-xs font-semibold uppercase tracking-wide">
+          <header className="text-body text-xs font-semibold uppercase tracking-wide md:text-sm">
             {experience.date}
           </header>
           <ListItemHeader
@@ -15,9 +16,7 @@ export default function ExperienceList({ experiences }) {
             link={experience.link}
             company={experience.company}
           />
-          <p className=" text-body text-sm mt-2 leading-normal">
-            {experience.description}
-          </p>
+          <ListBody body={experience.description} />
           <TechList tech={experience.tech} />
         </li>
       ))}

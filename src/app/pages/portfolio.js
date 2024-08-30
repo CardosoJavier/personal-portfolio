@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect, useState } from "react";
 import { EnvelopeAtFill, Github, Linkedin } from "react-bootstrap-icons";
 import Image from "next/image";
 import ExperienceList from "../components/experienceList";
@@ -17,8 +17,14 @@ export default function Portfolio() {
         <a href={links.domain}>
           <Image
             src={require("../static/img/brand/Logo.png")}
-            width={45}
-            height={45}
+            width={
+              window.innerWidth >= 768
+                ? 55
+                : window.innerWidth >= 1024
+                ? 65
+                : 45
+            }
+            height="auto"
           />
         </a>
         <div>
@@ -29,19 +35,21 @@ export default function Portfolio() {
             rel="noopener noreferrer"
             className="flex items-center justify-center border-headers border-2 rounded-md text-headers"
           >
-            <span className="text-sm px-2 py-2 tracking-tight">Resume</span>
+            <span className="text-sm px-2 py-2 tracking-tight md:text-base">
+              Resume
+            </span>
           </a>
         </div>
       </section>
       {/* Intro */}
       <section className="intro flex flex-col w-10/12 gap-3">
-        <h1 className=" text-4xl text-headers font-bold tracking-tight">
+        <h1 className=" text-4xl text-headers font-bold tracking-tight md:text-5xl">
           Javier Cardoso
         </h1>
-        <h2 className="text-xl font-medium tracking-tight text-slate-200">
+        <h2 className="text-xl font-medium tracking-tight text-slate-200 md:text-2xl">
           Software Engineer
         </h2>
-        <p className="text-body leading-normal tracking-tight font-light">
+        <p className="text-body leading-normal tracking-tight font-light md:text-lg">
           Just another developer trying to find a place in the world.
         </p>
         <div className="links flex flex-row gap-5">
@@ -51,7 +59,16 @@ export default function Portfolio() {
             rel="noopener noreferrer"
             className=" cursor-pointer"
           >
-            <Github color="#C6CDD4" size={20} />
+            <Github
+              color="#C6CDD4"
+              size={
+                window.innerWidth >= 768
+                  ? 25
+                  : window.innerWidth >= 1024
+                  ? 30
+                  : 20
+              }
+            />
           </a>
           <a
             href={links.linkedin}
@@ -59,7 +76,16 @@ export default function Portfolio() {
             rel="noopener noreferrer"
             className=" cursor-pointer"
           >
-            <Linkedin color="#C6CDD4" size={20} />
+            <Linkedin
+              color="#C6CDD4"
+              size={
+                window.innerWidth >= 768
+                  ? 25
+                  : window.innerWidth >= 1024
+                  ? 30
+                  : 20
+              }
+            />
           </a>
           <a
             href={"mailto:" + links.email}
@@ -67,14 +93,23 @@ export default function Portfolio() {
             rel="noopener noreferrer"
             className=" cursor-pointer"
           >
-            <EnvelopeAtFill color="#C6CDD4" size={20} />
+            <EnvelopeAtFill
+              color="#C6CDD4"
+              size={
+                window.innerWidth >= 768
+                  ? 25
+                  : window.innerWidth >= 1024
+                  ? 30
+                  : 20
+              }
+            />
           </a>
         </div>
       </section>
       {/* About */}
       <section
         id="about"
-        className=" flex flex-col gap-3 font-light text-body tracking-tight leading-relaxed"
+        className=" flex flex-col gap-3 font-light text-body tracking-tight leading-relaxed md:text-lg"
       >
         <SectionHeader header="about" />
         <p>

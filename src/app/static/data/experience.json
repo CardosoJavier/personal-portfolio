@@ -3,7 +3,7 @@
         "date": "July 2024 - Present",
         "title": "Software Engineer Inter · ",
         "company": "JPMorganChase",
-        "description": "Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.",
+        "description":"Implemented a core component to centralize and display critical Chase CB capabilities, facilitating the usage of these tools for developer teams across the firm. Successfully pitched this component to Chase's CB CFO and executive directors, achieving unanimous approval. Additionally, developed a new proxy endpoint to automatically gather and format capabilities data, making it easily accessible for any Chase Engineering & Architecture team.",
         "tech": ["React", "Spring Boot", "GraphQL", "Tailwind", "Docker", "AWS"],
         "link": "https://www.jpmorganchase.com"
     },
@@ -11,7 +11,7 @@
         "date": "July - August 2023",
         "title": "Software Engineer Inter · ",
         "company": "JPMorganChase",
-        "description": "Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.",
+        "description": "Designed, developed, and deployed a multi-tenant internal tool for backend developers at Chase Travel to streamline the retrieval, review, and customization of settings and configurations across various environments. The tool reduced configuration time by 80% and decreased error rates by 90%. It features multi-tenant support via command line, Azure Entra Authentication for enhanced security, and a mock application version for safe feature testing.",
         "tech": ["Angular", "ASP.NET", "TypeScript"],
         "link": "https://www.jpmorganchase.com"
     }

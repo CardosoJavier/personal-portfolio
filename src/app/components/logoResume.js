@@ -4,7 +4,10 @@ import links from "../static/data/links.json";
 import Image from "next/image";
 export default function LogoResume() {
   return (
-    <section className="logoResume flex flex-row justify-between items-center mb-10 md:mb-20">
+    <section
+      id="nav"
+      className="logoResume flex flex-row justify-between items-center mb-10 md:mb-20"
+    >
       <a href={links.domain}>
         <Image
           src={require("../static/img/brand/Logo.png")}

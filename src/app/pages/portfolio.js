@@ -1,6 +1,6 @@
 "use client";
+import { useEffect, useState } from "react";
 import { EnvelopeAtFill, Github, Linkedin } from "react-bootstrap-icons";
-import Image from "next/image";
 import ExperienceList from "../components/experienceList";
 import SectionHeader from "../components/sectionHeader";
 import ProjectList from "../components/projectList";
@@ -10,16 +10,15 @@ import links from "../static/data/links.json";
 import "../styles/css/scroll.css";
 import LogoResume from "../components/logoResume";
 import NavLink from "../components/navLink";
-import { useEffect, useState } from "react";
 
 export default function Portfolio() {
-  const [section, setSection] = useState("");
+  const [section, setSection] = useState("about");
 
   useEffect(() => {
     // get all sections ids
     const sections = document.querySelectorAll("section");
     const sectionVisibility = {
-      threshold: 0.8, // percentage of section visibility
+      threshold: section === "projects" || section === "footer" ? 0.3 : 0.8, // percentage of section visibility
     };
 
     // define observer
@@ -38,11 +37,11 @@ export default function Portfolio() {
   });
 
   return (
-    <div className=" px-8 py-12">
+    <div className="px-8 py-12">
       <LogoResume />
-      <div className=" grid grid-cols-1 text-left gap-5 lg:grid lg:grid-cols-2 lg:px-10 lg:py-20">
+      <div className=" grid text-left gap-5 lg:grid lg:grid-cols-2 lg:px-16 lg:py-20 2xl:px-60">
         {/* Intro */}
-        <section
+        <header
           id="intro"
           className="flex flex-col w-10/12 gap-3 mb-10 lg:col-span-1 lg:sticky lg:h-fit lg:top-20"
         >
@@ -110,9 +109,9 @@ export default function Portfolio() {
           </div>
           <ul className="hidden mt-20 lg:grid lg:gap-3 lg:w-full">
             <NavLink
-              sectionId={"about"}
+              sectionId={"nav"}
               sectionName={"about"}
-              sectionsToObserve={["about"]}
+              sectionsToObserve={["about", "nav"]}
               currentSection={section}
             />
             <NavLink
@@ -128,7 +127,7 @@ export default function Portfolio() {
               currentSection={section}
             />
           </ul>
-        </section>
+        </header>
 
         {/* Scroll column */}
         <div className="grid grid-cols-1 gap-14 lg:gap-32 lg:overflow-y-auto lg:h-full">

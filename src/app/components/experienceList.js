@@ -7,8 +7,11 @@ export default function ExperienceList({ experiences }) {
   return (
     <ul className="flex flex-col gap-10">
       {experiences.map((experience, index) => (
-        <li key={index} className=" md:grid md:grid-cols-3">
-          <header className="text-body text-xs font-semibold uppercase tracking-wide md:text-sm">
+        <li
+          key={index}
+          className="rounded-lg md:grid md:grid-cols-3 lg:hover:bg-body/10 lg:p-5"
+        >
+          <header className="text-body text-xs font-semibold uppercase tracking-wide md:text-sm lg:text-xs">
             {experience.date}
           </header>
           <div className=" md:col-span-2">

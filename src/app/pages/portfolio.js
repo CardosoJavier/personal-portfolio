@@ -8,43 +8,18 @@ import experience from "../static/data/experience.json";
 import projects from "../static/data/projects.json";
 import links from "../static/data/links.json";
 import "../styles/css/scroll.css";
+import LogoResume from "../components/logoResume";
 
 export default function Portfolio() {
   return (
-    <div className=" bg-custom-gradient grid grid-cols-1 text-left px-8 py-12 gap-20 lg:overflow-y-hidden lg:px-40">
-      {/* Logo and Resume */}
-      <section className="logoResume flex flex-row justify-between items-center">
-        <a href={links.domain}>
-          <Image
-            src={require("../static/img/brand/Logo.png")}
-            width={
-              window.innerWidth >= 768
-                ? 55
-                : window.innerWidth >= 1024
-                ? 65
-                : 45
-            }
-            height="auto"
-            className=" transition-transform duration-200 hover:scale-125"
-          />
-        </a>
-        <div>
-          <a
-            href="/JavierCardoso.pdf"
-            type="application/pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center border-headers border-2 rounded-md text-headers transition-colors duration-300 hover:text-teal-400 hover:border-teal-400"
-          >
-            <span className="text-sm px-2 py-2 tracking-tight md:text-base">
-              Resume
-            </span>
-          </a>
-        </div>
-      </section>
-      <div className="lg:grid lg:grid-cols-3 lg:h-screen">
+    <div className=" px-8 py-12">
+      <LogoResume />
+      <div className=" grid grid-cols-1 text-left gap-5 lg:grid lg:grid-cols-2 lg:px-10 lg:py-20">
         {/* Intro */}
-        <section className="intro flex flex-col w-10/12 gap-3 mb-10 lg:col-span-1">
+        <section
+          id="intro"
+          className="flex flex-col w-10/12 gap-3 mb-10 lg:col-span-1 lg:sticky lg:h-fit lg:top-20"
+        >
           <h1 className=" text-4xl text-headers font-bold tracking-tight md:text-5xl">
             Javier Cardoso
           </h1>
@@ -107,13 +82,43 @@ export default function Portfolio() {
               />
             </a>
           </div>
+          <ul className="hidden mt-20 lg:w-full lg:block">
+            <li>
+              <a
+                href="#about"
+                className="flex flex-row gap-5 items-center text-sm w-36 hover:w-44 transition-all duration-200"
+              >
+                <span className="border-2 border-body w-full h-0"></span>
+                ABOUT
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                className="flex flex-row gap-5 items-center text-sm w-36 hover:w-44 transition-all duration-200"
+              >
+                <span className="border-2 border-body w-full h-0"></span>
+                EXPERIENCE
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                className="flex flex-row gap-5 items-center text-sm w-36 hover:w-44 transition-all duration-200"
+              >
+                <span className="border-2 border-body w-full h-0"></span>
+                PROJECTS
+              </a>
+            </li>
+          </ul>
         </section>
+
         {/* Scroll column */}
-        <div className="scroll-hide grid grid-cols-1 gap-14 lg:gap-32 lg:col-span-2 lg:overflow-y-auto lg:overflow-x-hidden lg:h-full">
+        <div className="grid grid-cols-1 gap-14 lg:gap-32 lg:overflow-y-auto lg:h-full">
           {/* About */}
           <section
             id="about"
-            className=" flex flex-col gap-3 font-light text-body tracking-tight leading-relaxed md:text-lg"
+            className=" flex flex-col gap-3 font-light text-body tracking-tight leading-relaxed md:text-lg lg:text-base"
           >
             <SectionHeader header="about" />
             <p>
@@ -162,24 +167,24 @@ export default function Portfolio() {
             <SectionHeader header="projects" />
             <ProjectList projects={projects} />
           </section>
-          {/* Acknowledge */}
-          <section id="acknowledgement">
-            <p className="flex flex-col gap-1 font-light text-body tracking-tight leading-relaxed text-sm text-center">
-              Developed with ❤️ using NEXT.js
-              <br />
-              <span className="inline-flex justify-center">
-                Design inspired by
-                <a
-                  href="https://brittanychiang.com"
-                  className="hover:text-teal-400 mx-1 underline"
-                >
-                  Brittany Chiang
-                </a>
-              </span>
-            </p>
-          </section>
         </div>
       </div>
+      {/* Acknowledge */}
+      <section id="acknowledgement">
+        <p className="flex flex-col gap-1 font-light text-body tracking-tight leading-relaxed text-sm text-center mt-14">
+          Developed with ❤️ using NEXT.js
+          <br />
+          <span className="inline-flex justify-center">
+            Design inspired by
+            <a
+              href="https://brittanychiang.com"
+              className="hover:text-teal-400 mx-1 underline"
+            >
+              Brittany Chiang
+            </a>
+          </span>
+        </p>
+      </section>
     </div>
   );
 }

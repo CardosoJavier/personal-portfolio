@@ -11,7 +11,9 @@ export default function TechList({ tech }) {
           key={index}
           className="flex w-fit  px-3 py-1 bg-teal-400/10 rounded-full"
         >
-          <span className="text-teal-400 text-xs md:text-sm">{item}</span>
+          <span className="text-teal-400 text-xs md:text-sm lg:text-xs">
+            {item}
+          </span>
         </li>
       ))}
     </ul>

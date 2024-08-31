@@ -9,8 +9,34 @@ import projects from "../static/data/projects.json";
 import links from "../static/data/links.json";
 import "../styles/css/scroll.css";
 import LogoResume from "../components/logoResume";
+import NavLink from "../components/navLink";
+import { useEffect, useState } from "react";
 
 export default function Portfolio() {
+  const [section, setSection] = useState("");
+
+  useEffect(() => {
+    // get all sections ids
+    const sections = document.querySelectorAll("section");
+    const sectionVisibility = {
+      threshold: 0.8, // percentage of section visibility
+    };
+
+    // define observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setSection(entry.target.id);
+        }
+      });
+    }, sectionVisibility);
+
+    // observer for sections
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
+
   return (
     <div className=" px-8 py-12">
       <LogoResume />
@@ -82,34 +108,25 @@ export default function Portfolio() {
               />
             </a>
           </div>
-          <ul className="hidden mt-20 lg:w-full lg:block">
-            <li>
-              <a
-                href="#about"
-                className="flex flex-row gap-5 items-center text-sm w-36 hover:w-44 transition-all duration-200"
-              >
-                <span className="border-2 border-body w-full h-0"></span>
-                ABOUT
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                className="flex flex-row gap-5 items-center text-sm w-36 hover:w-44 transition-all duration-200"
-              >
-                <span className="border-2 border-body w-full h-0"></span>
-                EXPERIENCE
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                className="flex flex-row gap-5 items-center text-sm w-36 hover:w-44 transition-all duration-200"
-              >
-                <span className="border-2 border-body w-full h-0"></span>
-                PROJECTS
-              </a>
-            </li>
+          <ul className="hidden mt-20 lg:grid lg:gap-3 lg:w-full">
+            <NavLink
+              sectionId={"about"}
+              sectionName={"about"}
+              sectionsToObserve={["about"]}
+              currentSection={section}
+            />
+            <NavLink
+              sectionId={"experience"}
+              sectionName={"experience"}
+              sectionsToObserve={["experience"]}
+              currentSection={section}
+            />
+            <NavLink
+              sectionId={"projects"}
+              sectionName={"projects"}
+              sectionsToObserve={["projects", "footer"]}
+              currentSection={section}
+            />
           </ul>
         </section>
 
@@ -169,8 +186,8 @@ export default function Portfolio() {
           </section>
         </div>
       </div>
-      {/* Acknowledge */}
-      <section id="acknowledgement">
+      {/* footer */}
+      <section id="footer">
         <p className="flex flex-col gap-1 font-light text-body tracking-tight leading-relaxed text-sm text-center mt-14">
           Developed with ❤️ using NEXT.js
           <br />

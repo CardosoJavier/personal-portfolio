@@ -21,9 +21,10 @@ export default function Portfolio() {
     const mouseLocation = (event) => {
       setMouseCursor({ x: event.clientX, y: event.clientY });
     };
-    */
+    
 
     window.addEventListener("mousemove", mouseLocation);
+    */
 
     // get all sections ids
     const sections = document.querySelectorAll("section");

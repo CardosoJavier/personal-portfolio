@@ -3,8 +3,8 @@
         "date": "July 2024 - Present",
         "title": "Software Engineer Inter · ",
         "company": "JPMorganChase",
-        "description":"Implemented a core component to centralize and display critical Chase CB capabilities, facilitating the usage of these tools for developer teams across the firm. Successfully pitched this component to Chase's CB CFO and executive directors, achieving unanimous approval. Additionally, developed a new proxy endpoint to automatically gather and format capabilities data, making it easily accessible for any Chase Engineering & Architecture team.",
-        "tech": ["React", "Spring Boot", "GraphQL", "Tailwind", "Docker", "AWS"],
+        "description":"Developed a core component that centralized internal tools, increasing accessibility for developer teams across the organization. Created a proxy endpoint to automate data gathering and formatting, streamlining access for Chase Engineering & Architecture teams. Increased test coverage for new code to over 90% through the use of Test-Driven Development (TDD), ensuring improved code quality and reliability.",
+        "tech": ["React", "Spring Boot", "GraphQL", "Tailwind", "Jest", "PostgreSQL", "Docker", "AWS"],
         "link": "https://www.jpmorganchase.com"
     },
     {

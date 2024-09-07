@@ -13,8 +13,18 @@ import NavLink from "../components/navLink";
 
 export default function Portfolio() {
   const [section, setSection] = useState("about");
+  const [mouseCursor, setMouseCursor] = useState({ x: 50, y: 50 });
 
   useEffect(() => {
+    // get mouse position
+    /*
+    const mouseLocation = (event) => {
+      setMouseCursor({ x: event.clientX, y: event.clientY });
+    };
+    */
+
+    window.addEventListener("mousemove", mouseLocation);
+
     // get all sections ids
     const sections = document.querySelectorAll("section");
     const sectionVisibility = {
@@ -34,7 +44,7 @@ export default function Portfolio() {
     sections.forEach((section) => {
       observer.observe(section);
     });
-  });
+  }, []);
 
   return (
     <div className="px-8 py-12">

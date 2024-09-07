@@ -36,6 +36,8 @@ export default function ProjectList({ projects }) {
                 height="auto"
                 alt={project.name + " banner"}
                 className={`rounded-lg border-2 transition duration-500 border-body/35 hover:bg-body md:hidden lg:block`}
+                placeholder="blur"
+                priority
               />
               <TechList tech={project.tech} />
             </div>
